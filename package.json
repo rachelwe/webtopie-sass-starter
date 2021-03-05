@@ -1,0 +1,33 @@
+{
+  "name": "webtopie-sass-starter",
+  "version": "1.0.0",
+  "description": "A set of often used standardized utility classes, mixins and components",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "build": "node sassdoc.js",
+    "serve": "browser-sync start --server --files=\"**/*\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachelwe/webtopie-sass-starter.git"
+  },
+  "keywords": [
+    "Sass",
+    "workflow",
+    "ui",
+    "kit",
+    "styleguide"
+  ],
+  "author": "Rachel Pellin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachelwe/webtopie-sass-starter/issues"
+  },
+  "homepage": "https://github.com/rachelwe/webtopie-sass-starter#readme",
+  "dependencies": {
+    "sass": "^1.32.8",
+    "sassdoc": "^2.7.3"
+  }
+}
