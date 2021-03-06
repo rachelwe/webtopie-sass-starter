@@ -5,9 +5,9 @@
   "main": "index.html",
   "scripts": {
     "test": "test",
+    "sass": "sass --error-css --watch sass/styles.scss styles.css",
     "build": "node sassdoc.js",
     "serve": "browser-sync start --server --files=\"**/*\""
-
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/rachelwe/webtopie-sass-starter#readme",
   "dependencies": {
     "sass": "^1.32.8",
-    "sassdoc": "^2.7.3"
+    "sassdoc": "^2.7.3",
+    "sassdoc-theme-herman": "^4.0.0"
   }
 }

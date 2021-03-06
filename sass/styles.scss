@@ -1,1 +1,42 @@
-@import "utility/accessibility"
+/*!
+Author: Rachel Pellin
+Author URI: https://prachel.fr/
+Package: webtopie-sass-starter
+Version: 1.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variables
+
+# Base
+  ## Elements
+  ## Typography
+  ## Layout
+
+# Components
+  ## Buttons
+  ## Forms
+  ## Icons
+  ## Progress
+
+# Utility
+	## Accessibility
+  ## Spacers
+	## Alignments
+
+--------------------------------------------------------------*/
+
+@import "config/mixins";
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import "config/variables";
+
+/*--------------------------------------------------------------
+# Utility
+--------------------------------------------------------------*/
+@import "utility/accessibility";
+@import "utility/spacers";
