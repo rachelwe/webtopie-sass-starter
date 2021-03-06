@@ -22,9 +22,9 @@ $spacers: (
 /// CSS variables for theming and global config
 :root {
   // Brand colors
-  --color-primary: blue;
-  --color-secondary: teal;
-  --color-tertiary: peru;
+  --color-primary: RoyalBlue;
+  --color-secondary: aliceblue;
+  --color-tertiary: whitesmoke;
 
   // Semantic colors
   --color-success: green;
@@ -32,9 +32,26 @@ $spacers: (
   --color-info: cyan;
 
   // font family
-  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-  "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-title: var(--font-body);
-  --font-mono: monospace;
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  // Spacers
+  @each $name, $value in $spacers {
+    --spacer-#{$name}: #{$value};
+  }
+
+  // Blocks
+  --border-radius: 20px;
+
+  // Theme config
+  --color-text: #222;
+  --color-link: var(--color-primary);
+  --color-button-bg: var(--color-primary);
+  --color-button-text: #fff;
+  --text-size-desktop: 1.2rem;
+  --text-size-mobile: 1rem;
+
+  // Sizes
+  --site-width: 55rem;
 }
