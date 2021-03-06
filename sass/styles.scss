@@ -10,21 +10,19 @@ Version: 1.0
 ----------------------------------------------------------------
 # Variables
 
-# Base
-  ## Elements
-  ## Typography
-  ## Layout
+# Elements
+  ## Reset
+  ## Base
 
 # Components
-  ## Buttons
-  ## Forms
   ## Icons
-  ## Progress
+
+# Layout
+  ## Containers
 
 # Utility
 	## Accessibility
   ## Spacers
-	## Alignments
 
 --------------------------------------------------------------*/
 
@@ -40,6 +38,11 @@ Version: 1.0
 --------------------------------------------------------------*/
 @import "elements/reset";
 @import "elements/base";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/icons";
 
 /*--------------------------------------------------------------
 # Layout

@@ -9,21 +9,19 @@ Version: 1.0
 ----------------------------------------------------------------
 # Variables
 
-# Base
-  ## Elements
-  ## Typography
-  ## Layout
+# Elements
+  ## Reset
+  ## Base
 
 # Components
-  ## Buttons
-  ## Forms
   ## Icons
-  ## Progress
+
+# Layout
+  ## Containers
 
 # Utility
 	## Accessibility
   ## Spacers
-	## Alignments
 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -338,6 +336,23 @@ input:focus,
 input:active {
   background-color: var(--color-secondary);
   border-color: var(--color-link);
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+/*
+## Icons
+=====================*/
+.icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  line-height: 1;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  width: 1em;
 }
 
 /*--------------------------------------------------------------
