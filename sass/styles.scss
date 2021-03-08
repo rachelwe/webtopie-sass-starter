@@ -13,6 +13,11 @@ Version: 1.0
 # Elements
   ## Reset
   ## Base
+  ## Typography
+  ## Media
+  ## Tables
+  ## Forms
+  ## Progress
 
 # Components
   ## Icons
@@ -26,11 +31,10 @@ Version: 1.0
 
 --------------------------------------------------------------*/
 
-@import "config/mixins";
-
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
+@import "config/mixins";
 @import "config/variables";
 
 /*--------------------------------------------------------------
@@ -38,6 +42,11 @@ Version: 1.0
 --------------------------------------------------------------*/
 @import "elements/reset";
 @import "elements/base";
+@import "elements/typography";
+@import "elements/media";
+@import "elements/tables";
+@import "elements/forms";
+@import "elements/progress";
 
 /*--------------------------------------------------------------
 # Components

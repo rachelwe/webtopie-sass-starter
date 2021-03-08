@@ -265,12 +265,12 @@ p q r s t u v w x y z { | } ~ </pre>
         </article>
         <article id="embedded__meter">
           <header><h2>Meter</h2></header>
-          <div><meter value="2" min="0" max="10">2 out of 10</meter></div>
+          <div><meter value="50" min="0" low="10" optimum="50" high="90"  max="100">2 out of 100</meter></div>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__progress">
           <header><h2>Progress</h2></header>
-          <div><progress>progress</progress></div>
+          <div><progress value="2" min="0" max="10">progress</progress></div>
           <footer><p><a href="#top">[Top]</a></p></footer>
         </article>
         <article id="embedded__svg">
@@ -342,12 +342,9 @@ p q r s t u v w x y z { | } ~ </pre>
           </fieldset>
           <p><a href="#top">[Top]</a></p>
           <fieldset id="forms__checkbox">
-            <legend>Checkboxes</legend>
-            <ul class="list list--bare">
-              <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
-              <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
-              <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
-            </ul>
+            <legend>Checkboxes</legend><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
+              <label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label>
+              <label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label>
           </fieldset>
           <p><a href="#top">[Top]</a></p>
           <fieldset id="forms__radio">

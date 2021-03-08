@@ -42,10 +42,12 @@ $spacers: (
   }
 
   // Blocks
-  --border-radius: 20px;
+  --border-radius: 0;
 
   // Theme config
   --color-text: #222;
+  --color-background: #fff;
+  --color-background-accent: #ddd;
   --color-link: var(--color-primary);
   --color-button-bg: var(--color-primary);
   --color-button-text: #fff;
