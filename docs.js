@@ -13,27 +13,58 @@ fetch(file)
       const all = rawPartials[1].split(/\//);
       partials.push(all);
     }
-  
-    partials.forEach( partial => {
-      fetch(`sass/${partial[0]}/_${partial[1]}.scss`)
-      .then(response => response.text())
-      .then(data => {
-        const parsed = new DOMParser().parseFromString(data, 'text/html');
-        const codeTitle = document.createElement('h2');
-        const codeBlock = document.createElement('pre');
-        const codeBlockInner = document.createElement('code');
-        codeBlockInner.className = "language-scss";
-        document.querySelector('.container').appendChild(codeBlock);
-        codeBlockInner.innerHTML = parsed.firstChild.innerHTML;
-        codeBlock.appendChild(codeBlockInner);
-        document.querySelector('.container').insertBefore(codeTitle, codeBlock);
-        codeTitle.innerHTML = `${partial[0]}/_${partial[1]}.scss`;
-        Prism.highlightElement(codeBlockInner);
-      })
-    })
 
-    window.Prism = window.Prism || {};
-        window.Prism.manual = true;
+    const groupData = arr => {
+      return arr.reduce((acc, val) => {
+         const [groupName, value] = val;
+         const groupIndex = acc.findIndex(el => el?.group === groupName);
+         if(groupIndex !== -1){
+            acc[groupIndex].value.push(value);
+         }else{
+            acc.push({
+               group: groupName,
+               value: [value]
+            });
+         }
+         return acc;
+      }, []);
+   };
+  //  console.log(groupData(partials));
+  
+   groupData(partials).forEach( partial => {
+      const folder = partial.group;
+      const files = partial.value;
+
+      const folderBlock = document.createElement('details');
+      folderBlock.className = "folder";
+      folderBlock.id = `folder-${file}`;
+      document.querySelector('.container').appendChild(folderBlock);
+      const folderBlockTemplate = 
+        `<summary>${folder}</summary>`;
+
+      folderBlock.innerHTML = folderBlockTemplate;
+
+      files.forEach( file => {
+        fetch(`sass/${folder}/_${file}.scss`)
+        .then(response => response.text())
+        .then(data => {
+          const parsed = new DOMParser().parseFromString(data, 'text/html');
+          const codeBlock = document.createElement('details');
+          codeBlock.className = "file";
+          codeBlock.id = `file-${file}`;
+          folderBlock.appendChild(codeBlock);
+          
+          const codeBlockTemplate = 
+          `<summary>_${file}.scss</summary>
+            <pre><code class="language-scss" id="code-${file}">${parsed.firstChild.innerHTML}</code></pre>`;
+
+          codeBlock.innerHTML = codeBlockTemplate;
+          const codeBlockInner = document.querySelector(`#code-${file}`);
+          Prism.highlightElement(codeBlockInner);
+        })
+      })
+      
+    })
   });
 
 
